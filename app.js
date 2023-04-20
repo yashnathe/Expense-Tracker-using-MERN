@@ -1,32 +1,46 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 const Router = require("./routers");
-dotenv.config({ path: "./config.env" });
+const connectDB = require("./db/connect")
+// dotenv.config({ path: "./config.env" });
+dotenv.config();
 const app = express();
 
-mongoose.set('strictQuery', false);
+// mongoose.set('strictQuery', false);
 
-const dbURI = process.env.DATABASE;
-const port = process.env.PORT || 5000;
+// const dbURI = process.env.DATABASE;
+const PORT = process.env.PORT || 5000;
 
 app.use(express.static("public"));
 app.use(express.json());
 app.use(cookieParser());
 app.use(Router);
-mongoose
-  .connect(dbURI)
-  .then((result) => {
-    app.listen(port);
-    console.log("connected to mongodb and listening at port 5000");
-  })
-  .catch((err) => console.error(err));
+// mongoose
+//   .connect(dbURI)
+//   .then((result) => {
+//     app.listen(port);
+//     console.log("connected to mongodb and listening at port 5000");
+//   })
+//   .catch((err) => console.error(err));
 
-if (process.env.NODE_ENV == "production") {
-  app.use(express.static("client/build"));
-  const path = require("path");
-  app.get("*", function (req, res) {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  });
+// if (process.env.NODE_ENV == "production") {
+//   app.use(express.static("client/build"));
+//   const path = require("path");
+//   app.get("*", function (req, res) {
+//     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+//   });
+// }
+const start = async () => {
+  try {
+    await connectDB(process.env.MONGO_URL);
+    app.listen(PORT, console.log(`server is listening on ${PORT}`));
+  }
+  catch (error) {
+    console.log(error);
+  }
 }
+
+start();
+

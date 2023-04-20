@@ -9,6 +9,7 @@ import github from "../assets/github.png";
 import instagram from "../assets/instagram.png";
 import Rohan from "../assets/Rohan.jpg"
 import Yash from "../assets/Yash.jpeg";
+import Suyash from "../assets/Suyash.jpg"
 import Mayuri from "../assets/Mayuri.jpg"
 import Aniket from "../assets/Aniket.jpg"
 
@@ -83,7 +84,7 @@ const Developers = () => {
               Rohan Dable
             </h1>
             <h1 className="mt-1 text-lg text-slate-500">
-              Full-stack Developer
+              Full-stack Web Developer
             </h1>
             <div className="w-36 flex justify-between mt-6">
               <a
@@ -111,7 +112,7 @@ const Developers = () => {
         <div className="mx-auto mt-5 lg:mt-0 lg:mx-0 bg-jp-black relative shadow-slate-700 shadow-md rounded-md w-72 h-96">
           <div className="h-2/6 bg-mj-yellow rounded-t-md overflow-hidden"></div>
           <img
-            src={Rohan}
+            src={Suyash}
             alt="developer"
             className="absolute w-32 top-16 left-20 border-2 rounded-full bg-black border-black"
           />
@@ -120,7 +121,7 @@ const Developers = () => {
               Suyash Shirtar
             </h1>
             <h1 className="mt-1 text-lg text-slate-500">
-              Full-stack Developer
+              Full-stack Web Developer
             </h1>
             <div className="w-36 flex justify-between mt-6">
               <a
@@ -154,10 +155,10 @@ const Developers = () => {
           />
           <div className="mt-20 flex flex-col items-center justify-center ">
             <h1 className=" text-slate-300 text-3xl font-semibold">
-              Aniket Nikumb
+              Aniket Nikumbh
             </h1>
             <h1 className="mt-1 text-lg text-slate-500">
-              Full-stack Developer
+              Data Analyst
             </h1>
             <div className="w-36 flex justify-between mt-6">
               <a
