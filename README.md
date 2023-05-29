@@ -13,7 +13,7 @@ You can add and delete Expenses easily with different categories.
 Clone the project
 
 ```bash
-  git clone https://github.com/Bug-Slicers/expensetracker.git
+  git clone https://github.com/yashnathe/Expense-Tracker-using-MERN.git
 ```
 
 Go to the project directory
@@ -71,9 +71,9 @@ To run this project, you will need to add the following environment variables to
 
 ## Authors  
 
-- [Jayesh Patil](https://github.com/jayesh1602)
-- [Rohit Patil](https://github.com/rohitvpatil0810)
-- [Manas Jadhav](https://github.com/ManasJadhav)
+- [Yash Nathe](https://github.com/yashnathe)
+- [Rohan Dable](https://github.com/RohanDable)
+- [Suyash Shirtar](https://github.com/SuyashOP-2)
 
 
 
